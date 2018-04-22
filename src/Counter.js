@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Counter.css';
 
 class Counter extends Component {
   constructor(props) {
@@ -12,8 +13,14 @@ class Counter extends Component {
       from: prevState.from - 1
     }));
     }
-    
+    //  else {
+    //   onSuccess();
+    // }
   }
+
+  // onSuccess() {
+
+  // }
 
   componentDidMount() {
     setInterval(
@@ -23,8 +30,8 @@ class Counter extends Component {
 
   render() {
     return(
-      <div>
-        Counter: { this.state.from }
+      <div class="counter">
+        <h1>Counter: { this.state.from }</h1>
       </div>
     )
   }
